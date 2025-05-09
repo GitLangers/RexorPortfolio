@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Homepage</title>
+    <link rel="stylesheet" href="homestyle.css">
+</head>
+<body>
+    <header>
+        <h1 id="animated-text">Learn about me</h1>
+    </header>
+    <main class="main-content">
+        
+        <div class="aboutme-container">
+            <a href="aboutme.html" class="aboutme-link"></a>
+            <p class="aboutme-text">ABOUT ME</p>
+        </div>
+
+        <div class="skill-container">
+            <a href="skill.html" class="skill-link"></a>
+            <p class="skill-text">MY SKILLS</p>
+        </div>
+
+        <div class="call-container">
+            <a href="call.html" class="call-link"></a>
+            <p class="call-text">CONTACT ME</p>
+        </div>
+
+        <div class="backhom-container">
+            <a href="index.html" class="backhom-link"></a>
+            <p class="backhom-text">Home</p>
+        </div>
+
+        <div class="profile-container">
+            <img id="profile-pic" src="profile1.jpg" alt="Profile Picture">
+          </div>
+        
+        <h2 class="bouncier-text">
+            <span>R</span><span>e</span><span>x</span><span>o</span><span>r</span>
+            <span>&nbsp;</span><span>J</span><span>e</span><span>f</span><span>f</span>
+            <span>&nbsp;</span><span>D</span><span>.</span>
+            <span>&nbsp;</span><span>L</span><span>a</span><span>n</span><span>g</span><span>r</span><span>e</span><span>s</span>
+        </h2>
+
+        <p class="idle-paragraph">
+            <span>AGE: 22   BIRTHDAY: 04/04/03</span><br>
+            <span>HEIGHT: 170cm   WEIGHT: 78kg</span><br>
+            <span>CURRENT COURSE: BSIT</span><br>
+            <span>ADDRESS: Tagbilaran City, Bohol</span>
+        </p><br>
+
+        <p class="idle-head2">Interests & Hobbies:</p>
+
+        <div class="icon-box" id="iconBox">
+            <img src="icon1.png" alt="Icon" class="icon" id="icon">
+            <p class="icon-text" id="iconText">Singing</p>
+          </div>
+          
+          <script>
+            const icon = document.getElementById('icon');
+            const text = document.getElementById('iconText');
+          
+            const icons = [
+              { src: 'icon1.png', text: 'Singing' },
+              { src: 'icon2.png', text: 'Arts' },
+              { src: 'icon3.png', text: 'Weight Training' }
+            ];
+          
+            let index = 0;
+          
+            icon.addEventListener('click', () => {
+              index = (index + 1) % icons.length;
+              icon.src = icons[index].src;
+              text.textContent = icons[index].text;
+            });
+          </script>
+
+    </main>
+    <footer class="site-footer">
+        <p>&copy; 2025 REX LANGERS. All rights reserved.</p>
+    </footer>
+    <script src="animate.js"></script>
+</body>
+</html>
